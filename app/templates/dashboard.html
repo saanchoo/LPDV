@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-8">
+        <div class="card-vago p-5">
+            <h2 class="text-center mb-4">🎛️ El Panel del Vago</h2>
+            
+            <form action="{{ url_for('crear_playlist') }}" method="POST">
+                
+                <div class="mb-4">
+                    <label for="playlist_name" class="form-label">Nombre de la Playlist</label>
+                    <input type="text" class="form-control bg-dark text-white border-secondary" 
+                           id="playlist_name" name="playlist_name" 
+                           placeholder="Ej: Temazos para no hacer nada" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">¿Cuántas canciones analizo de tu historial?</label>
+                    <input type="range" class="form-range" min="5" max="50" step="5" id="num_tracks" name="num_tracks" oninput="this.nextElementSibling.value = this.value">
+                    <output style="color: var(--spotify-green); font-weight: bold;">25</output> canciones
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-vago">
+                        🚀 Generar Playlist Mágica
+                    </button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

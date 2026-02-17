@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="hero-section">
+    <h1 class="display-3 fw-bold mb-4">Menos pensar.<br>Más escuchar.</h1>
+    <p class="lead mb-5" style="color: #b3b3b3;">
+        Genera playlists automáticas basadas en lo que ya escuchas. 
+        Sin configurar nada. Ideal para vagos.
+    </p>
+    
+    {% if not logged_in %}
+        <a href="{{ url_for('login') }}" class="btn btn-vago btn-lg">
+            Inicia sesión con Spotify
+        </a>
+    {% else %}
+        <div class="card-vago mx-auto" style="max-width: 500px;">
+            <h3>👋 ¡Hola de nuevo!</h3>
+            <p>Ya estás conectado.</p>
+            <a href="{{ url_for('dashboard') }}" class="btn btn-vago mt-3">
+                Ir al Generador
+            </a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

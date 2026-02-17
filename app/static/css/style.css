@@ -1,0 +1,80 @@
+:root {
+    --spotify-green: #1DB954;
+    --spotify-black: #191414;
+    --spotify-dark-gray: #535353;
+    --spotify-light-gray: #B3B3B3;
+    --white: #FFFFFF;
+}
+
+body {
+    background-color: var(--spotify-black);
+    color: var(--white);
+    font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000000 !important;
+    padding: 1rem;
+}
+
+.navbar-brand {
+    color: var(--spotify-green) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Botones */
+.btn-vago {
+    background-color: var(--spotify-green);
+    color: white;
+    border-radius: 500px;
+    padding: 14px 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    transition: transform 0.2s;
+}
+
+.btn-vago:hover {
+    background-color: #1ed760;
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Contenedores */
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.card-vago {
+    background-color: #282828;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 60px rgba(0,0,0,0.5);
+}
+
+.track-list {
+    list-style: none;
+    padding: 0;
+}
+
+.track-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.track-item:last-child {
+    border-bottom: none;
+}
+
+.track-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
