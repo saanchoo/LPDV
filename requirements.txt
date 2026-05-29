@@ -2,3 +2,5 @@ Flask
 spotipy
 python-dotenv
 requests
+flask-sqlalchemy
+gunicorn
