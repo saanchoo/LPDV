@@ -8,7 +8,7 @@ function LandingPage() {
   return (
     <div className="landing">
       <div className="landing-inner">
-        <img src={logo} alt="La Playlist Del Vago" style={{ maxWidth: '180px', marginBottom: '1rem' }} />
+        <img src={logo} alt="La Playlist Del Vago" style={{ maxWidth: '340px', width: '80%', marginBottom: '1.5rem' }} />
         <h1>La Playlist Del Vago</h1>
         <p className="landing-tagline">
           Conecta tu Spotify, nosotros analizamos lo que escuchas<br />
