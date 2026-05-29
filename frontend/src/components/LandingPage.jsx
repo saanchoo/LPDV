@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png'
+
 function LandingPage() {
   const handleLogin = () => {
     window.location.href = '/api/auth/login'
@@ -6,7 +8,7 @@ function LandingPage() {
   return (
     <div className="landing">
       <div className="landing-inner">
-        <span className="landing-icon">🎵</span>
+        <img src={logo} alt="La Playlist Del Vago" style={{ maxWidth: '180px', marginBottom: '1rem' }} />
         <h1>La Playlist Del Vago</h1>
         <p className="landing-tagline">
           Conecta tu Spotify, nosotros analizamos lo que escuchas<br />

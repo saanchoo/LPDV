@@ -1,9 +1,10 @@
+import logoNavbar from '../assets/logo-navbar.png'
+
 function Navbar({ user, onLogout }) {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <span className="navbar-brand-name">LPDV</span>
-        <span className="navbar-brand-tagline">La Playlist Del Vago</span>
+        <img src={logoNavbar} alt="La Playlist Del Vago" style={{ maxHeight: '36px' }} />
       </div>
 
       {user && (
