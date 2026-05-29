@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: lpdv
+    runtime: python
+    buildCommand: pip install -r requirements.txt && cd frontend && npm install && npm run build
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: SPOTIFY_CLIENT_ID
+        sync: false
+      - key: SPOTIFY_CLIENT_SECRET
+        sync: false
+      - key: SECRET_KEY
+        sync: false
+      - key: SPOTIFY_REDIRECT_URI
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
